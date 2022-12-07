@@ -1,0 +1,30 @@
+.body {
+  background-color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.login__input {
+  border-color: lightgray;
+  border-width: 1px;
+  margin-top: 10;
+  width: 90%;
+  font-family: 'Pretendard-Medium';
+  border-radius: 4px;
+}
+
+.login__button {
+  background-color: black;
+  width: 90%;
+  height: 45;
+  margin-top: 10;
+  display: flex;
+  border-radius: 4px;
+  justify-content: center;
+}
+
+.login__button__text {
+  color: white;
+  text-align: center;
+}
