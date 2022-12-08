@@ -1,30 +1,32 @@
-.body {
+import styled from '@emotion/native';
+
+export const Container = styled.View`
   background-color: white;
   height: 100%;
   display: flex;
   align-items: center;
-}
+`;
 
-.login__input {
+export const LoginInput = styled.TextInput`
   border-color: lightgray;
   border-width: 1px;
-  margin-top: 10;
+  margin-top: 10px;
   width: 90%;
   font-family: 'Pretendard-Medium';
   border-radius: 4px;
-}
+`;
 
-.login__button {
+export const LoginButton = styled.TouchableOpacity`
   background-color: black;
   width: 90%;
-  height: 45;
-  margin-top: 10;
+  height: 45px;
+  margin-top: 10px;
   display: flex;
   border-radius: 4px;
   justify-content: center;
-}
+`;
 
-.login__button__text {
+export const LoginButtonText = styled.Text`
   color: white;
   text-align: center;
-}
+`;

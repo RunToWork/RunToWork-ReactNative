@@ -1,21 +1,19 @@
 import * as React from 'react';
 import {View, Text, TextInput, Button, TouchableOpacity} from 'react-native';
-import styles from './styles.scss';
-import HeaderStyles from '../../components/Header/styles.scss';
+import {Header} from '../../components/Header/header';
+import {Container, LoginButton, LoginButtonText, LoginInput} from './styled';
 
 export const Login = () => {
   return (
     <>
-      <View style={HeaderStyles.header}>
-        <Text style={HeaderStyles.title}>로그인</Text>
-      </View>
-      <View style={styles.body}>
-        <TextInput style={styles.login__input} placeholder="아이디" />
-        <TextInput style={styles.login__input} placeholder="비밀번호" />
-        <TouchableOpacity style={styles.login__button}>
-          <Text style={styles.login__button__text}>로그인</Text>
-        </TouchableOpacity>
-      </View>
+      <Header title="로그인" />
+      <Container>
+        <LoginInput placeholder="아이디" />
+        <LoginInput placeholder="비밀번호" />
+        <LoginButton>
+          <LoginButtonText>로그인</LoginButtonText>
+        </LoginButton>
+      </Container>
     </>
   );
 };
