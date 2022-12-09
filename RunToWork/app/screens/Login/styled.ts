@@ -16,14 +16,34 @@ export const LoginInput = styled.TextInput`
   border-radius: 4px;
 `;
 
+export const LoginFindGroup = styled.View`
+  display: flex;
+  flex-direction: row;
+  margin: 15px 20px;
+  align-self: flex-end;
+`;
+export const LoginFindText = styled.Text`
+  text-align: right;
+  font-family: 'Pretendard-Light';
+`;
+
 export const LoginButton = styled.TouchableOpacity`
   background-color: black;
   width: 90%;
   height: 50px;
   margin-top: 10px;
   display: flex;
+  flex-direction: row;
   border-radius: 4px;
   justify-content: center;
+  align-items: center;
+`;
+
+export const KakaoIcon = styled.View`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 `;
 
 export const LoginKakaoButton = styled.TouchableOpacity`
@@ -44,23 +64,43 @@ export const LoginAppleButton = styled.TouchableOpacity`
   display: flex;
   border-radius: 4px;
   justify-content: center;
+  align-items: center;
+  flex-direction: row;
   border: 1px;
 `;
 
 export const LoginButtonText = styled.Text`
   color: white;
   text-align: center;
-  ont-family: 'Pretendard-Regular';
+  font-family: 'Pretendard-ExtraBold';
 `;
 
 export const LoginKakaoButtonText = styled.Text`
   text-align: center;
   font-family: 'Pretendard-ExtraBold';
+  margin-left: 5px;
   color: black;
+`;
+
+export const LoginInfoGroup = styled.View`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
 `;
 
 export const LoginInfoText = styled.Text`
   text-align: center;
-  font-family: 'Pretendard-ExtraBold';
-  color: blue;
+  font-family: 'Pretendard-Medium';
+  color: #00aaff;
+`;
+
+export const LoginJoinBox = styled.TouchableOpacity`
+  display: flex;
+  border-radius: 4px;
+  justify-content: center;
+  border: 1px #00aaff;
+  padding: 3px 10px;
+  margin-left: 10px;
 `;
