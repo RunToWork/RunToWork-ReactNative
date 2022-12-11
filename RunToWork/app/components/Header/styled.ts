@@ -14,7 +14,8 @@ export const HeaderIcon = styled.TouchableOpacity`
   justify-content: center;
   align-items: center;
   height: 50px;
-  flex: 1;
+  width: 50px;
+  margin-left: -20px;
 `;
 
 export const HeaderTitle = styled.Text`

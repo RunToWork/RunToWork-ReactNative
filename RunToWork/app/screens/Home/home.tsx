@@ -6,7 +6,6 @@ import {Container} from '../Login/styled';
 export const Home = () => {
   return (
     <>
-      <Header title="출근런" />
       <Container></Container>
     </>
   );

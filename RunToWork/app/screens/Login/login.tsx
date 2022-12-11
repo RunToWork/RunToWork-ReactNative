@@ -16,12 +16,12 @@ import {
   LoginKakaoButtonText,
 } from './styled';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {faComment, faAppleAlt} from '@fortawesome/free-solid-svg-icons';
+import {faComment} from '@fortawesome/free-solid-svg-icons';
+import {faApple} from '@fortawesome/free-brands-svg-icons';
 
 export const Login = ({navigation}) => {
   return (
     <>
-      <Header title="로그인" />
       <Container>
         <LoginInput placeholder="아이디" />
         <LoginInput placeholder="비밀번호" />
@@ -35,17 +35,17 @@ export const Login = ({navigation}) => {
         </LoginFindGroup>
         <LoginKakaoButton>
           <KakaoIcon>
-            <FontAwesomeIcon icon={faComment} size={20} />
+            <FontAwesomeIcon icon={faComment} size={17} />
             <LoginKakaoButtonText>카카오 로그인</LoginKakaoButtonText>
           </KakaoIcon>
         </LoginKakaoButton>
         <LoginAppleButton>
-          <FontAwesomeIcon icon={faAppleAlt} size={20} />
+          <FontAwesomeIcon icon={faApple} size={20} />
           <LoginKakaoButtonText>Apple 로그인</LoginKakaoButtonText>
         </LoginAppleButton>
         <LoginInfoGroup>
           <LoginInfoText>나만의 출퇴근 관리 시작하기</LoginInfoText>
-          <LoginJoinBox>
+          <LoginJoinBox onPress={() => navigation.navigate('SignUp')}>
             <LoginInfoText>회원가입</LoginInfoText>
           </LoginJoinBox>
         </LoginInfoGroup>
