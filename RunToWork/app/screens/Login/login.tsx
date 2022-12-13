@@ -18,8 +18,18 @@ import {
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faComment} from '@fortawesome/free-solid-svg-icons';
 import {faApple} from '@fortawesome/free-brands-svg-icons';
+import {useAppSelector, useAppDispatch} from '../../store/hooks';
+import {
+  setAccessToken,
+  setEmail,
+  selectUserInfo,
+} from '../../store/reducers/userSlice';
 
 export const Login = ({navigation}) => {
+  const userInfo = useAppSelector(selectUserInfo);
+  console.log(userInfo);
+
+  const dispatch = useAppDispatch();
   return (
     <>
       <Container>
