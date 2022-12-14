@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {Header} from '../../components/Header/header';
 import {
   Container,
   KakaoIcon,
@@ -11,6 +10,7 @@ import {
   LoginInfoGroup,
   LoginInfoText,
   LoginInput,
+  LoginInputError,
   LoginJoinBox,
   LoginKakaoButton,
   LoginKakaoButtonText,
@@ -24,18 +24,60 @@ import {
   setEmail,
   selectUserInfo,
 } from '../../store/reducers/userSlice';
+import {useForm, Controller} from 'react-hook-form';
+import {LoginInputs} from '../../types';
 
 export const Login = ({navigation}) => {
   const userInfo = useAppSelector(selectUserInfo);
   console.log(userInfo);
+  const {
+    control,
+    handleSubmit,
+    formState: {errors},
+  } = useForm({
+    defaultValues: {
+      id: '',
+      password: '',
+    },
+  });
+
+  const onSubmit = (data: LoginInputs) => {};
 
   const dispatch = useAppDispatch();
   return (
     <>
       <Container>
-        <LoginInput placeholder="아이디" />
-        <LoginInput placeholder="비밀번호" />
-        <LoginButton onPress={() => navigation.navigate('Home')}>
+        <Controller
+          control={control}
+          rules={{required: true}}
+          render={({field: {onChange, onBlur, value}}) => (
+            <LoginInput
+              onBlur={onBlur}
+              onChangeText={onChange}
+              value={value}
+              placeholder="아이디"
+            />
+          )}
+          name="id"
+        />
+        {errors.id && <LoginInputError>아이디를 입력해주세요</LoginInputError>}
+        <Controller
+          control={control}
+          rules={{required: true}}
+          render={({field: {onChange, onBlur, value}}) => (
+            <LoginInput
+              onBlur={onBlur}
+              onChangeText={onChange}
+              value={value}
+              placeholder="비밀번호"
+            />
+          )}
+          name="password"
+        />
+        {errors.password && (
+          <LoginInputError>비밀번호를 입력해주세요</LoginInputError>
+        )}
+        <LoginButton onPress={handleSubmit(onSubmit)}>
           <LoginButtonText>로그인</LoginButtonText>
         </LoginButton>
         <LoginFindGroup>

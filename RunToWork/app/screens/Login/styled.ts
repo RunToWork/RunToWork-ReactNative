@@ -16,6 +16,12 @@ export const LoginInput = styled.TextInput`
   border-radius: 4px;
 `;
 
+export const LoginInputError = styled.Text`
+  color: grey;
+  font-family: 'Pretendard-Medium';
+  font-size: 12px;
+`;
+
 export const LoginFindGroup = styled.View`
   display: flex;
   flex-direction: row;
