@@ -52,6 +52,7 @@ export const Login = ({navigation}) => {
           rules={{required: true}}
           render={({field: {onChange, onBlur, value}}) => (
             <LoginInput
+              style={{height: 50}}
               onBlur={onBlur}
               onChangeText={onChange}
               value={value}
