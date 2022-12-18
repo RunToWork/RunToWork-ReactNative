@@ -41,7 +41,9 @@ export const Login = ({navigation}) => {
     },
   });
 
-  const onSubmit = (data: LoginInputs) => {};
+  const onSubmit = (data: LoginInputs) => {
+    navigation.navigate('Home');
+  };
 
   const dispatch = useAppDispatch();
   return (
