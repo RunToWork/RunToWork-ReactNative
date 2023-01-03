@@ -69,6 +69,7 @@ export const Login = ({navigation}) => {
           rules={{required: true}}
           render={({field: {onChange, onBlur, value}}) => (
             <LoginInput
+              style={{height: 50}}
               onBlur={onBlur}
               onChangeText={onChange}
               value={value}
@@ -86,7 +87,7 @@ export const Login = ({navigation}) => {
         <LoginFindGroup>
           <LoginFindText>아이디 찾기</LoginFindText>
           <LoginFindText> | </LoginFindText>
-          <LoginFindText>비밀번호 찾기</LoginFindText>
+          <LoginFindText> 비밀번호 찾기</LoginFindText>
         </LoginFindGroup>
         <LoginKakaoButton>
           <KakaoIcon>

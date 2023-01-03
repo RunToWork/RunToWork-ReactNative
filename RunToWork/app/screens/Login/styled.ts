@@ -1,3 +1,4 @@
+import {Color} from '../../constants/colors';
 import styled from '@emotion/native';
 
 export const Container = styled.View`

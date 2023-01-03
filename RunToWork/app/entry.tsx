@@ -26,16 +26,16 @@ export const App = () => {
             headerTitleStyle: {fontFamily: 'Pretendard-Bold', fontSize: 15},
           }}>
           <Stack.Screen
-            name="Login"
-            component={Login}
-            options={{title: '로그인'}}
-          />
-          <Stack.Screen
             name="Home"
             component={Home}
             options={{
               title: '출근런',
             }}
+          />
+          <Stack.Screen
+            name="Login"
+            component={Login}
+            options={{title: '로그인'}}
           />
           <Stack.Screen
             name="SignUp"

@@ -1,7 +1,8 @@
 import styled from '@emotion/native';
+import {Color} from '../../constants/colors';
 
 export const Container = styled.View`
-  background-color: lightgrey;
+  background-color: ${Color.PALEGREYTWO};
   height: 100%;
   display: flex;
   align-items: center;
@@ -11,21 +12,34 @@ export const HomeBox = styled.View`
   display: flex;
   flex-direction: column;
   width: 95%;
-  background-color: white;
   margin: 10px;
   border-radius: 5px;
 `;
 
+export const HomeBoxShadow = {
+  shadowColor: Color.BLACKTWO,
+  shadowOffset: {
+    width: 0,
+    height: 2,
+  },
+  shadowOpacity: 0.25,
+  shadowRadius: 3.84,
+
+  elevation: 5,
+};
+
 export const HomeBoxGroup = styled.View`
   display: flex;
   flex-direction: column;
-  margin: 15px;
+  background-color: ${Color.WHITE};
+  padding: 15px;
+  margin: 5px 0;
 `;
 
 export const BoxTitle = styled.Text`
   font-family: 'Pretendard-Bold';
   font-size: 20px;
-  color: black;
+  color: ${Color.BLACK};
   margin-bottom: 10px;
 `;
 
@@ -62,7 +76,7 @@ export const BoxReqButton = styled.TouchableOpacity`
 
 export const BoxCommuteButton = styled.TouchableOpacity`
   border-radius: 3px;
-  background-color: blue;
+  background-color: ${Color.BLUE};
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -74,4 +88,21 @@ export const BoxCommuteButton = styled.TouchableOpacity`
 export const BoxButtonText = styled.Text`
   font-family: 'Pretendard-Medium';
   color: white;
+`;
+
+export const SmallBox = styled.View`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const SmallBoxText = styled.Text`
+  flex: 10;
+`;
+
+export const SmallBoxLeftIcon = styled.View`
+  flex: 1;
+`;
+
+export const SmallBoxRightIcon = styled.Text`
+  flex: 0.5;
 `;
