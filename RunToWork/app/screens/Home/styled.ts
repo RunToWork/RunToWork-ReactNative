@@ -1,11 +1,10 @@
 import styled from '@emotion/native';
 import {Color} from '../../constants/colors';
 
-export const Container = styled.View`
+export const Container = styled.ScrollView`
   background-color: ${Color.PALEGREYTWO};
   height: 100%;
   display: flex;
-  align-items: center;
 `;
 
 export const HomeBox = styled.View`
@@ -65,7 +64,7 @@ export const BoxButtonGroup = styled.View`
 `;
 
 export const BoxReqButton = styled.TouchableOpacity`
-  border: 1px solid dimgrey;
+  border: 1px solid ${Color.COOLGREY};
   border-radius: 3px;
   padding: 10px;
   width: 20%;
@@ -104,5 +103,37 @@ export const SmallBoxLeftIcon = styled.View`
 `;
 
 export const SmallBoxRightIcon = styled.Text`
-  flex: 0.5;
+  display: flex;
+  flex-direction: row;
+`;
+
+export const CommuteInfoArea = styled.View`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const HorizontalLine = {
+  borderBottomWidth: 1,
+  borderBottomColor: Color.COOLGREY,
+  marginTop: 20,
+  marginBottom: 15,
+};
+
+export const CommuteHourGroup = styled.View`
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+`;
+
+export const CommuteText = styled.Text`
+  flex: 7;
+  margin-left: 5px;
+  font-family: 'Pretendard-Bold';
+`;
+
+export const CommuteHour = styled.Text`
+  flex: 3;
+  color: ${Color.CERULEAN};
+  text-align: right;
+  margin-right: 5px;
 `;
